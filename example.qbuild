@@ -1,0 +1,58 @@
+// Defines the project, if another project needs to reference something defined here, it will be referenced as OtherProjectName.compilation_unit
+project Example
+{
+    // comment style vvv
+    // everything is essentially a string
+    version 0.0; // could be version 1a-18;
+    // version keyword ^^^
+
+    author ExampleAuthor;
+    // author keyword ^^^, can be listed out eg. author Author1; author Author2;
+
+    platform
+    {
+        win32; win64; mac; linux;
+    }
+
+    //outputs an exe for each supported platform
+    executable MyExe
+    {
+        // project parent overrides
+        version 0.1;
+        author AnAuthour;
+        platform
+        {
+            win32; // overrides project specification
+        }
+
+        // include modules from source, must be able to be found in a recursive search in proj-root
+        include
+        {
+            my_module;
+            my_other_module;
+        }
+
+        link
+        {
+            // this is an external project
+            qstdlib
+            {
+                math;
+                string;
+                containers;
+            }
+
+            // handling c/c++ interop libraries will be worked out later
+        }
+    }
+
+    dynamiclib MyLib
+    {
+        // exact same as executable but produces a shared/dynamic library
+    }
+
+    staticlib MyOtherLib
+    {
+        // you get the point
+    }
+}
