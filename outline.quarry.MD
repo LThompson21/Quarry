@@ -116,7 +116,7 @@ _File: outline.quarry.md_
 - Clang frontend for C/C++ headers → `.qri`.
 - `T*` in C/C++ maps to `T?*` in Quarry.
 - Shared ABI via LLVM IR.
-- C/C++ libraries imported through `.qri`.
+- C/C++ libraries imported through generated `.qri` bindings, must be pre-compiled.
 
 ---
 
