@@ -109,6 +109,7 @@ _File: outline.quarry.md_
 - **Memory:** UniquePtr, SharedPtr, Arena.
 - **System:** FileIO, OS, Threads.
 - **Math:** Vec, Mat, Quat (for future engine work).
+- **Utils, etc...**
 
 ---
 
@@ -122,9 +123,9 @@ _File: outline.quarry.md_
 
 ## **12. Future Directions**
 - Reflection & codegen macros.
-- Inline assembly / intrinsics.
+- Inline assembly, C/C++ / intrinsics.
 - Parallel compilation & incremental linking.
 - IDE integration (LSP).
-- Experimental borrow-checker layer.
+- Self-Hosted compiler
 
 ---
